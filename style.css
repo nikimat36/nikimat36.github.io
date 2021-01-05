@@ -1,0 +1,567 @@
+html{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(233, 233, 233);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.box1, .box2, .box3, .box4, .box5{
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.box3{
+    height: 100%;
+}
+
+h2{
+    position: relative;
+    text-align: center;
+}
+/*============= menu-box =============*/
+.menu-box{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.menu-box a{
+    text-decoration: none;
+    color: rgb(233, 233, 233);
+    padding-left: 20px;
+}
+
+
+/*============= intro =============*/
+.box1{
+    background-color: black;
+    overflow: hidden;
+}
+
+.space{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 494.75px;
+    padding: 0;
+    margin:0;
+    transform-origin: bottom center;
+    background-image: url(space3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    pointer-events: none;
+}
+
+.space::after {
+    content:"";
+    background-image: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    width:inherit;
+    height: 100%;
+    position: absolute;
+    bottom:-99%;
+    transform:scaleY(-1);
+}
+
+.space::before {
+    content:"";
+    width:inherit;
+    height: 100%;
+    position: absolute;
+    bottom: -99%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4),black);
+    z-index: 1;
+}
+
+
+
+.reflection {
+    width: 220.5px;
+    height: 194.75px;
+    position: absolute;
+    --x: 40%;
+    left: var(--x);
+    top: 300px;
+    background-image: url("astro-man1.png");
+    background-size: cover;
+    /*box-shadow: 0px 50px 70px rgba(0,0,0,0.3),
+      0px 10px 10px rgba(0,0,0,0.1);*/
+    pointer-events: none;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.reflection::after {
+    content:"";
+    background-image: inherit;
+    background-size: cover;
+    background-position: top center;
+    width:inherit;
+    height: 100%;
+    position: absolute;
+    bottom:-100.2%;
+    transform:scaleY(-1);
+    opacity: 0.5;
+}
+
+
+
+.intro-h{
+    position: relative;
+    font-size: 50px;
+    font-weight: bolder;
+    width: 100%;
+    --a: 0;
+    --b: 0;
+    left: var(--a);
+    top: var(--b);
+    margin-top: 100px;
+    text-align: left;
+    padding-left: 80px;
+    color: white;
+    transform-origin: left;
+    animation: entrence 1s ease-out 1;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    pointer-events: none;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.intro-p{
+    font-size: 30px;
+    padding-left: 30px;
+    color: orange;
+}
+
+@keyframes entrence{
+    0%{
+        transform: translateX(100%);
+    }
+
+    80%{
+        transform: translateX(-10%);
+        letter-spacing: 0px;
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+/*============= skills =============*/
+.box2{
+    padding-top: 30px;
+}
+.skill-box{
+    position: relative;
+    width: 90%;
+    height: 16%;
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 5px;
+}
+
+.skill-box fieldset{
+    position: relative;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 500px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(0,0,0,0.5);
+}
+
+legend{
+    padding: 0 10px;
+}
+
+.curls{
+    color: orange;
+}
+
+.skill{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.skill:hover{
+    cursor: pointer;
+    color: #ace63c;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+}
+      
+.icon {
+    fill: rgb(233, 233, 233);
+}
+    
+.skill:hover .icon {
+    fill: #ace63c; 
+}
+
+/*============= about =============*/
+.box3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.box-about{
+    position: relative;
+    width: 60%;
+    height: 50%;
+    min-width: 400px;
+    max-width: 700px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(26,33,57);
+    border-radius: 5%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-p{
+    position: relative;
+    background-color: rgb(218, 218, 218);
+    padding: 0;
+    margin: 0;
+    flex-grow: 3;
+    color:rgb(58, 58, 58);
+}
+
+.about-p p{
+    position: absolute;
+    width: 80%;
+    line-height: 200%;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-img{
+    position: relative;
+    background-color: rgb(26,33,57);
+    padding: 0;
+    margin: 0;
+    flex-grow: 2; 
+    background-image: url(keepCoding.gif);
+    background-size: auto 80%;
+    background-position: -30px;
+    background-repeat: no-repeat;          
+}
+
+
+/*============= projects =============*/
+.box4{
+    padding-top: 30px;
+    max-height: 100%;
+}
+
+.projects-box{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.project{
+    position: relative;
+    width: 30%;
+    min-width: 350px;
+    height: 250px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 50px;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pro1, .pro2, .pro3, .pro4, .pro5, .pro6{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.pro1{
+    background-image: linear-gradient(rgba(0, 159, 252, 0.5), rgba(0, 159, 252, 0.5)), url('project1.JPG');
+}
+
+.pro2{ 
+    background-image: linear-gradient(rgba(0, 252, 155, 0.5), rgba(0, 252, 155, 0.5)), url('project2.JPG');
+}
+
+.pro3{ 
+    background-image: linear-gradient(rgba(252, 185, 0, 0.5), rgba(252, 185, 0, 0.5)), url('project3.JPG');
+}
+
+.pro4{ 
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0, 0, 0.5)), url('project4.JPG');
+}
+
+.pro5{ 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('project5.JPG');
+}
+
+.pro6{ 
+    background-image: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255, 0.5)), url('project6.JPG');
+}
+
+.cover{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(16, 16, 39);
+    opacity: 0.0;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.cover a{
+    text-decoration: none;
+}
+
+.project-btn{
+    /*--- remove default ---*/
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    /* ------ */
+    position: relative;
+    margin: 10px;
+    width: 100px;
+    height: 35px;
+    border: 2px solid rgb(117, 11, 255);
+    color:rgb(218, 218, 218);
+    font-size: 14px;
+    border-radius: 500px;   /*500px = capsule shape*/
+    transition-duration: 0.5s;
+}
+
+.project-btn:hover{
+    background-color:rgb(117, 11, 255);
+}
+
+.cover:hover{
+    opacity:1;
+}
+
+/*============= contact =============*/
+.box5{
+    padding-top: 50px;
+}
+
+.box5 h2{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.contact-box{
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contact{
+    width: 30%;
+    height: 300px;
+    transition-duration: 1s;
+}
+
+.contact a{
+    text-decoration: none;
+}
+
+.contact i {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.e{
+    color:rgb(28, 218, 224);
+    border: 1px solid rgb(28, 218, 224);
+}
+
+.g{
+    color:rgb(73, 38, 231);
+    border: 1px solid rgb(73, 38, 231);;
+}
+
+.l{
+    color: rgb(0, 140, 255);
+    border: 1px solid rgb(0, 140, 255);
+}
+
+.e:hover, .g:hover, .l:hover{
+    transform: scale(1.1);
+    color: rgb(218, 218, 218);
+    cursor: pointer;
+}
+
+.e:hover{
+    background-color:  rgb(28, 218, 224);
+    box-shadow: 0px 0px 20px  rgb(28, 218, 224);
+}
+
+.g:hover{
+    background-color: rgb(73, 38, 231);
+    box-shadow: 0px 0px 20px rgb(73, 38, 231);
+}
+
+.l:hover{
+    background-color: rgb(0, 140, 255);
+    box-shadow: 0px 0px 20px rgb(0, 140, 255);
+}
+
+.cont-btn{
+    /*--- remove default ---*/
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    /* ------ */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 5px 0;
+    width: 80px;
+    height: 30px;
+    border: 2px solid transparent;
+    color:transparent;
+    font-size: 14px;
+    border-radius: 500px;   /*500px = capsule shape*/
+    transition-duration: 0.5s;
+}
+
+.contact:hover .cont-btn{
+    border: 2px solid rgb(20, 20, 61);
+    color:rgb(218, 218, 218);
+}
+
+.cont-btn:hover{
+    background-color: rgb(20, 20, 61);
+    color:rgb(218, 218, 218);
+    border: 2px solid rgb(218, 218, 218);
+}
+
+.linkbox{
+    position: absolute;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+/*============= screen media =============*/
+@media screen and (max-width: 600px){
+    .skill{
+        height: 55px;
+        margin: 3px;
+        font-size: 11px;
+    }
+
+    .skill-box fieldset{ height: 90%; justify-content: center;}
+ 
+    .intro-h{
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .intro-p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .box-about{
+        width: 50%;
+        height: 60%;
+        flex-direction: column-reverse;
+    }    
+
+    .about-img{
+        background-size: auto 100%;
+        background-position: 0px;
+    }
+}
