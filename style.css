@@ -348,7 +348,7 @@ legend{
     overflow: hidden;
 }
 
-.pro1, .pro2, .pro3, .pro4, .pro5, .pro6{
+.pro1, .pro2, .pro3, .pro4, .pro5, .pro6, .pro7{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -377,6 +377,10 @@ legend{
 
 .pro6{ 
     background-image: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255, 0.5)), url('project6.JPG');
+}
+
+.pro7{ 
+    background-image: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255, 0.5)), url('project7.JPG');
 }
 
 .cover{
