@@ -95,9 +95,9 @@
             }
         });
 
-        // ====== TBA =======
-        function tba(){
-            alert("Sorry, I forgot to upload project to Github. I will fix it as soon as possible.");
+        // ========= menubar - smoothscroll =========
+        function smoothMenu(m_link){
+            smoothScroll(m_link, 1000);
         }
 
         // ======= COPY LINK =======
