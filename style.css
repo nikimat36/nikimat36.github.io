@@ -176,6 +176,14 @@ h2{
     border: 2px solid rgb(233, 233, 233);
     border-radius: 500px;
     cursor: pointer;
+    left: 5%;
+    transition-duration: 1s;
+}
+
+.box1 button:hover{
+    background-color: rgb(233, 233, 233);
+    color: black;
+    font-weight: bolder;
 }
 
 @keyframes entrence{
