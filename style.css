@@ -55,14 +55,12 @@ h2{
     padding-top: 5px;
 }
 
-.menu-box a:hover{
-    color: orange;
-}
 
 /*============= intro =============*/
 .box1{
     background-color: black;
-    overflow: hidden;
+    padding-top: 50px;
+    /*overflow: hidden;*/
 }
 
 .space{
@@ -120,11 +118,12 @@ h2{
     pointer-events: none;
     transition-duration: 1s;
     transition-timing-function: ease-out;
+    z-index: 3;
 }
 
 .reflection::after {
     content:"";
-    background-image: inherit;
+    background-image: url("astro-man1.png");
     background-size: cover;
     background-position: top center;
     width:inherit;
@@ -148,7 +147,7 @@ h2{
     top: var(--b);
     margin-top: 100px;
     text-align: left;
-    padding-left: 80px;
+    padding-left: 20%;
     color: white;
     transform-origin: left;
     animation: entrence 1s ease-out 1;
@@ -157,12 +156,26 @@ h2{
     pointer-events: none;
     transition-duration: 1s;
     transition-timing-function: ease-out;
+    z-index: 2;
 }
 
 .intro-p{
     font-size: 30px;
     padding-left: 30px;
     color: orange;
+}
+
+.box1 button{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    z-index: 5;
+    background-color: transparent;
+    color:rgb(233, 233, 233);
+    outline: none;
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 500px;
+    cursor: pointer;
 }
 
 @keyframes entrence{
@@ -179,6 +192,7 @@ h2{
         transform: translateX(0%);
     }
 }
+
 /*============= skills =============*/
 .box2{
     padding-top: 30px;
@@ -278,6 +292,7 @@ legend{
     position: absolute;
     width: 80%;
     line-height: 200%;
+    font-size: 14px;
     margin: 0;
     left: 50%;
     top: 50%;
@@ -372,7 +387,7 @@ legend{
 }
 
 .pro5{ 
-    background-image: linear-gradient(rgba(13,198,105, 0.5), rgba(13,198,105, 0.5)), url('project5.JPG');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('project5.JPG');
 }
 
 .pro6{ 
@@ -561,6 +576,10 @@ legend{
     .intro-p{
         font-size: 20px;
     }
+
+    .contact-box{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 850px){
@@ -568,6 +587,7 @@ legend{
         width: 50%;
         height: 60%;
         flex-direction: column-reverse;
+        font-size: 13px;
     }    
 
     .about-img{
